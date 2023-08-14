@@ -1,4 +1,5 @@
-const socket = io();
+const socket = io(); 
+
 
 const colors = ["#fc9671", "#ffd26c", "#53a6fd", "#4858ff", "#f15c5a", "#23a03b", "#AA00FF"]
 
