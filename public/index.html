@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Live</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="login">
+        <div id="dialogModal" class="dialogModal">
+            <form method="post" id="form" class="form">
+                <label id="labelUsuario" name="inputUsuario" for="usuario">USUARIO</label>
+                <input id="inputUsuario" name="inputUsuario" type="text" placeholder="Ingrese su nombre">
+                <label id="labelPassword" name="inputPassword" for="password">CONTRASEÑA</label>
+                <input id="inputPassword" name="inputPassword" type="password" placeholder="Ingrese su contraseña">
+                <button id="submitForm">INGRESAR</button>
+            </form>
+        </div>
+    
+        <div class="video-container">
+            <video src="./media/back.mp4" autoplay loop muted></video>
+        </div>
+    </section>
+
+    <section id="chat" class="chat-container">
+        <div class="header">
+            <div class="header-logo"></div>
+            <div class="header-options"></div>
+        </div>
+
+        <div id="chat-messages" class="chat-messages">
+        </div>
+
+        <div class="container-input">
+            <input type="text" id="inputMessage" name="inputMessage" class="inputMessage">
+            <button id="sendMessage" onclick="sendMessage()"><i class='bx bx-send'></i></button>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
